@@ -27,7 +27,7 @@ cd capitaine-cursors
 sudo apt install inkscape x11-apps -y
 chmod +x build.sh
 bash build.sh -p -t
-
+cd ..
 
 # Obsidian 
 bash obsidian.sh
