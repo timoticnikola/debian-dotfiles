@@ -11,4 +11,4 @@ sudo dpkg -i $NAME
 sudo apt -f install -y
 
 cd .. 
-cp -r .config/ ~/.config
+cp -r .config/ ~/.
