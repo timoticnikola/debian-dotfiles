@@ -18,9 +18,12 @@ sudo apt update -y
 
 sudo apt install brave-browser -y
 
-
+sudo echo -e "XDG_CURRENT_DESKTOP=Unity\nQT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment
 
 bash obsidian.sh
+
+
+
 
 # sddm - lock screen
 # psmisc - killall command
