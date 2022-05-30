@@ -8,4 +8,7 @@ NAME=$(curl -L -s https://api.github.com/repos/obsidianmd/obsidian-releases/rele
 
 curl -OL $URL
 sudo dpkg -i $NAME
-sudo apt -f install
+sudo apt -f install -y
+
+cd .. 
+cp -r .config/ ~/.config

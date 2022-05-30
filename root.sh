@@ -4,7 +4,7 @@
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list 
 
-sudo apt install vim kitty awesome polybar psmisc sddm -y
+sudo apt install vim kitty awesome fonts-roboto psmisc sddm lxappearance papirus-icon-theme nautilus qt5-style-plugins materia-gtk-theme -y
 
 
 # brave browser
