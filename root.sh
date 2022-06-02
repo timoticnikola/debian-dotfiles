@@ -4,6 +4,8 @@
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 cp sources.list /etc/apt/sources.list 
 
+sudo apt update && sudo apt upgrade -y
+
 sudo apt install vim rofi kitty awesome fonts-roboto psmisc sddm flameshot nautilus lxappearance papirus-icon-theme nautilus qt5-style-plugins materia-gtk-theme -y
 
 
