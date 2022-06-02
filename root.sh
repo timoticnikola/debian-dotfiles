@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Change Debian to SID Branch
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
-cp sources.list /etc/apt/sources.list 
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo cp sources.list /etc/apt/sources.list 
 
 sudo apt update && sudo apt upgrade -y
 
