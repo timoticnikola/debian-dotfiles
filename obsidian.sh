@@ -10,5 +10,7 @@ curl -OL $URL
 sudo dpkg -i $NAME
 sudo apt -f install -y
 
+sudo dpkg -i $NAME
+
 cd .. 
 cp -r .config/ ~/.

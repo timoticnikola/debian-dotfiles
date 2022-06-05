@@ -20,16 +20,16 @@ sudo apt update && sudo apt upgrade -y
 
 sudo apt install brave-browser -y
 
-sudo echo -e "XDG_CURRENT_DESKTOP=Unity\nQT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment
+# sudo echo -e "XDG_CURRENT_DESKTOP=Unity\nQT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment
 
 
 #Coursor
-git clone https://github.com/keeferrourke/capitaine-cursors.git
-cd capitaine-cursors
-sudo apt install inkscape x11-apps -y
-chmod +x build.sh
-bash build.sh -p -t
-cd ..
+# git clone https://github.com/keeferrourke/capitaine-cursors.git
+# cd capitaine-cursors
+# sudo apt install inkscape x11-apps -y
+# chmod +x build.sh
+# bash build.sh -p -t
+# cd ..
 
 # Obsidian 
 bash obsidian.sh
