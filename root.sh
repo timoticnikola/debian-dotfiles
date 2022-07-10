@@ -7,12 +7,21 @@
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo cp sources.list /etc/apt/sources.list 
 
+########################
+# Update and upgrade system
+########################
+
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install vim rofi kitty awesome fonts-roboto psmisc sddm flameshot nautilus lxappearance papirus-icon-theme nautilus qt5-style-plugins materia-gtk-theme -y
+########################
+# Install packages
+########################
+
+sudo bash installPackages.sh
+
 
 ########################
-# brave browser
+# Brave browser
 ########################
 
 sudo apt install apt-transport-https curl -y
@@ -24,8 +33,6 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install brave-browser -y
-
-# sudo echo -e "XDG_CURRENT_DESKTOP=Unity\nQT_QPA_PLATFORMTHEME=gtk2" >> /etc/environment
 
 ########################
 # visual studio code
@@ -39,7 +46,8 @@ rm -f packages.microsoft.gpg
 
 # sudo apt install apt-transport-https
 sudo apt update
-sudo apt install code # or code-insiders
+sudo apt install code 
+# or code-insiders
 
 ########################
 # Coursor
@@ -56,9 +64,19 @@ sudo apt install code # or code-insiders
 # Obsidian 
 ########################
 
-bash obsidian.sh
+# bash obsidian.sh
 
 # sddm - lock screen
 # psmisc - killall command
 
-cp -r internal_config/mount-shared.sh ~/mount-shared.sh
+########################
+# Copy dotfiles
+########################
+
+cp -r .config/ ~/
+
+########################
+# Enable Desktop Manager 
+########################
+
+sudo systemctl start sddm --now
