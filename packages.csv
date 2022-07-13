@@ -16,4 +16,7 @@ qt5-style-plugins,"widget styles",
 materia-gtk-theme,"gtk theme",
 picom,"X11 compositor",
 nitrogen,"Wallpaper manager",
+i3lock-fancy,"Lock screen",
+neofetch,"Syustem info",
+zsh,"Shell",
 Package_name,"Description"

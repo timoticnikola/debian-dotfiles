@@ -214,8 +214,8 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
+    
     s.mywibox = awful.wibar({ position = "top", screen = s })
-
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -233,6 +233,13 @@ awful.screen.connect_for_each_screen(function(s)
             mytextclock,
             s.mylayoutbox,
         },
+    }
+    s.mywibox = awful.wibar({ position = "left", screen = s })
+    s.mywibox:setup {
+        layout = wibox.layout.align.vertical,
+        { -- Left widgets
+            layout = wibox.layout.fixed.vertical
+        }
     }
 end)
 -- }}}
@@ -333,8 +340,8 @@ globalkeys = gears.table.join(
     --          {description = "run prompt", group = "launcher"}),
     awful.key({ modkey,           }, "r", function() awful.util.spawn("rofi -show drun") end, 
               {description="run rofi", group="launcher"}),
-    awful.key({ modkey,           }, "`", function() awful.util.spawn("rofi -show drun") end, 
-              {description="run rofi", group="launcher"}),
+    awful.key({ modkey,           }, "`", function() awful.util.spawn("i3lock-fancy -p -g") end, 
+              {description="lock screen", group="launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -512,7 +519,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
