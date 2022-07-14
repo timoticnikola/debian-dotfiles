@@ -618,6 +618,10 @@ end)
 -- Start compositor
 
 awful.spawn.with_shell("picom")
+ 
+-- Dunst notifications
+
+awful.spawn.with_shell("exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc")
 
 -- Restore wallpaper
 
